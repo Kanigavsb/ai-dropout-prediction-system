@@ -1,0 +1,16 @@
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Java
+backend/target/
+backend/*.class
+
+# Python
+ml-model/venv/
+ml-model/__pycache__/
+*.pkl
+
+# Env/secrets
+.env
+application.properties
