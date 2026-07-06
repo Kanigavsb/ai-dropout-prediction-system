@@ -6,6 +6,7 @@ import AddStudent from "./pages/AddStudent";
 import AddAcademicRecord from "./pages/AddAcademicRecord";
 import AddFeeRecord from "./pages/AddFeeRecord";
 import AddCounselingSession from "./pages/AddCounselingSession";
+import ViewStudents from "./pages/ViewStudents";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/add-academic-record" element={<AddAcademicRecord />} />
         <Route path="/add-fee-record" element={<AddFeeRecord />} />
         <Route path="/add-counseling-session" element={<AddCounselingSession />} />
+        <Route path="/students" element={<ViewStudents />} />
       </Routes>
     </BrowserRouter>
   );
