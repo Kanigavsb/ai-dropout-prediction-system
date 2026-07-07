@@ -20,6 +20,24 @@ function AddAcademicRecord() {
     e.preventDefault();
     setMessage("");
     setError("");
+
+    if (formData.attendance_pct < 0 || formData.attendance_pct > 100) {
+      setError("Attendance must be between 0 and 100.");
+      return;
+    }
+    if (formData.cgpa < 0 || formData.cgpa > 10) {
+      setError("CGPA must be between 0 and 10.");
+      return;
+    }
+    if (formData.backlogs < 0) {
+      setError("Backlogs cannot be negative.");
+      return;
+    }
+    if (formData.semester < 1 || formData.semester > 8) {
+      setError("Semester must be between 1 and 8.");
+      return;
+    }
+
     try {
       await axios.post("http://localhost:8080/api/academic-records", formData);
       setMessage("Academic record added successfully!");
