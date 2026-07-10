@@ -54,7 +54,7 @@ public class PredictionController {
         Map<String, Object> mlResponse;
         try {
             mlResponse = restTemplate.postForObject(
-                    "http://127.0.0.1:5001/predict",
+                    "https://dropout-prediction-ml.onrender.com/predict"
                     requestBody,
                     Map.class
             );
