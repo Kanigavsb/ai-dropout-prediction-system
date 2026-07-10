@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import Navbar from "../components/Navbar";
 function ViewStudents() {
   const [students, setStudents] = useState([]);
   const [search, setSearch] = useState("");
@@ -31,9 +31,11 @@ function ViewStudents() {
   const thStyle = { padding: "10px", textAlign: "left", borderBottom: "2px solid #ccc" };
   const tdStyle = { padding: "10px", borderBottom: "1px solid #eee" };
 
-  return (
-    <div style={{ maxWidth: "900px", margin: "40px auto", padding: "20px" }}>
-      <h2>Students</h2>
+ return (
+    <div>
+      <Navbar />
+      <div style={{ maxWidth: "900px", margin: "40px auto", padding: "20px" }}>
+        <h2>Students</h2>
 
       <input
         type="text"
@@ -73,7 +75,8 @@ function ViewStudents() {
             )}
           </tbody>
         </table>
-      )}
+     )}
+      </div>
     </div>
   );
 }

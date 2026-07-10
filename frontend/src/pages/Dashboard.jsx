@@ -1,4 +1,5 @@
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import Navbar from "../components/Navbar";
 
 function Dashboard() {
   // Placeholder data — will be replaced with real API data once backend is ready
@@ -24,8 +25,9 @@ function Dashboard() {
     margin: "0 10px",
   };
 
-  return (
+ return (
     <div style={{ padding: "40px", maxWidth: "900px", margin: "0 auto" }}>
+      <Navbar />
       <h2>Dashboard</h2>
 
       <div style={{ display: "flex", marginBottom: "40px" }}>

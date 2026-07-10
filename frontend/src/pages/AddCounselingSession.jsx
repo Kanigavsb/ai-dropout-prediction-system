@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
+import Navbar from "../components/Navbar";
 function AddCounselingSession() {
   const [formData, setFormData] = useState({
     student_id: "",
@@ -32,8 +32,10 @@ function AddCounselingSession() {
   const inputStyle = { width: "100%", padding: "8px", marginTop: "5px", marginBottom: "15px" };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "60px auto", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }}>
-      <h2>Log Counseling Session</h2>
+    <div>
+      <Navbar />
+      <div style={{ maxWidth: "500px", margin: "60px auto", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }}>
+        <h2>Log Counseling Session</h2>
       <form onSubmit={handleSubmit}>
         <label>Student ID</label>
         <input
@@ -91,6 +93,7 @@ function AddCounselingSession() {
           Log Session
         </button>
       </form>
+      </div>
     </div>
   );
 }

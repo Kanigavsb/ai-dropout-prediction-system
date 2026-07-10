@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-
+import Navbar from "../components/Navbar";
 function AddFeeRecord() {
   const [formData, setFormData] = useState({
     student_id: "",
@@ -31,8 +31,10 @@ function AddFeeRecord() {
   const inputStyle = { width: "100%", padding: "8px", marginTop: "5px", marginBottom: "15px" };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "60px auto", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }}>
-      <h2>Add Fee Record</h2>
+    <div>
+      <Navbar />
+      <div style={{ maxWidth: "500px", margin: "60px auto", padding: "20px", border: "1px solid #ccc", borderRadius: "8px" }}>
+        <h2>Add Fee Record</h2>
       <form onSubmit={handleSubmit}>
         <label>Student ID</label>
         <input
@@ -85,6 +87,7 @@ function AddFeeRecord() {
           Add Record
         </button>
       </form>
+      </div>
     </div>
   );
 }
