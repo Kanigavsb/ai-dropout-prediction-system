@@ -20,7 +20,7 @@ function AddStudent() {
     setMessage("");
     setError("");
     try {
-      await axios.post("http://localhost:8080/api/students", formData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/students`, formData);
       setMessage("Student added successfully!");
       setFormData({ name: "", roll_no: "", department: "", semester: "" });
     } catch (err) {

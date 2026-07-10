@@ -21,7 +21,7 @@ function AddCounselingSession() {
     setMessage("");
     setError("");
     try {
-      await axios.post("http://localhost:8080/api/counseling-sessions", formData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/counseling-sessions`, formData);
       setMessage("Counseling session logged successfully!");
       setFormData({ student_id: "", counselor_id: "", notes: "", session_date: "", follow_up_date: "" });
     } catch (err) {

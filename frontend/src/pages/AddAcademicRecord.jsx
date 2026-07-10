@@ -39,7 +39,7 @@ function AddAcademicRecord() {
     }
 
     try {
-      await axios.post("http://localhost:8080/api/academic-records", formData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/academic-records`, formData);
       setMessage("Academic record added successfully!");
       setFormData({ student_id: "", attendance_pct: "", cgpa: "", backlogs: "", semester: "" });
     } catch (err) {

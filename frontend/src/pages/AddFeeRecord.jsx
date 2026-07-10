@@ -20,7 +20,7 @@ function AddFeeRecord() {
     setMessage("");
     setError("");
     try {
-      await axios.post("http://localhost:8080/api/fee-records", formData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/fee-records`, formData);
       setMessage("Fee record added successfully!");
       setFormData({ student_id: "", amount_due: "", amount_paid: "", status: "PENDING" });
     } catch (err) {

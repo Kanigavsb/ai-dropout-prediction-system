@@ -13,7 +13,7 @@ function ViewStudents() {
 
   const fetchStudents = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/students");
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/students`);
       setStudents(response.data);
     } catch (err) {
       setError("Could not load students. Please check backend connection.");
