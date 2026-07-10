@@ -53,11 +53,11 @@ public class PredictionController {
 
         Map<String, Object> mlResponse;
         try {
-            mlResponse = restTemplate.postForObject(
-                    "https://dropout-prediction-ml.onrender.com/predict"
-                    requestBody,
-                    Map.class
-            );
+              mlResponse = restTemplate.postForObject(
+        "https://dropout-prediction-ml.onrender.com/predict",
+        requestBody,
+        Map.class
+);
         } catch (Exception e) {
             return ResponseEntity.status(500).body("Could not reach ML prediction service. Is it running?");
         }
